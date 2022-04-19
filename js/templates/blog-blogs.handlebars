@@ -1,0 +1,26 @@
+{{#each data.data}}
+  <div class="py-3 blog">
+    <h4>{{name}}</h4>
+    <div>by
+      {{author}}
+      in
+      <a href="#" onclick="loadBlogs('blogs/categories/{{categoryId}}')">Blog.
+        {{category.name}}</a>
+      on
+      {{date}}
+      Hits: 210
+      <a
+        href="#"
+        onclick="loadDetails({{id}})"
+      >Comments({{comments.length}})</a>
+    </div>
+    <div class="py-3">
+      <img src="{{thumbpath}}" class="img-thumbnail img-blog" alt="" />
+      <p>{{summary}}
+      </p>
+      <br />
+      <br />
+      <a href="#" class="read-more" onclick="loadDetails({{id}})">Read more</a>
+    </div>
+  </div>
+{{/each}}
